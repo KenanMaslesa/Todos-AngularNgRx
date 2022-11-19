@@ -45,4 +45,3 @@ export class TodoFacade {
     this.store.dispatch(AddTodo({ payload: todo }));
   }
 }
-

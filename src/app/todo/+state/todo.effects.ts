@@ -68,7 +68,7 @@ export class ToDoEffects {
       switchMap(({ id }) =>
         this.todoService.deleteTodo(id).pipe(
           map(() => {
-            return ToDoActions.DeleteTodoSuccess({id});
+            return ToDoActions.DeleteTodoSuccess({ id });
           }),
           catchError((error: Error) => {
             return of(ToDoActions.DeleteTodoFailure({ error: error.message }));
