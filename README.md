@@ -1,3 +1,6 @@
-Todos API: https://mockend.com/KenanMaslesa/todos-api/todo
+Todos API:
+https://mockend.com/KenanMaslesa/todos-api/todo
+https://mockend.com/KenanMaslesa/todos-api/todo?limit=10
 
-![image](https://user-images.githubusercontent.com/55869934/202849890-6839d2e5-de03-4b63-9323-90029bfcbf97.png)
+
+![image](https://user-images.githubusercontent.com/55869934/202867845-f7ff806f-00d5-4ae4-8072-f4301fe81934.png)
