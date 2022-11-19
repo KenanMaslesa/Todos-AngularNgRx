@@ -10,7 +10,7 @@ export class TodoFiltersComponent implements OnInit {
 
   public ngOnInit(): void {}
 
-  public deleteCompletedTodos(): void {
-    this.todoFacade.dispatchDeleteCompletedTodos();
+  public clearCompletedTodos(): void {
+    this.todoFacade.dispatchClearCompletedTodos();
   }
 }

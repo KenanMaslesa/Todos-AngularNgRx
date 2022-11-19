@@ -13,10 +13,10 @@ import { AppComponent } from './app.component';
     BrowserModule,
     TodoModule,
     HttpClientModule,
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       name: 'DevTools & Debugging in NgRx',
     }),
-    StoreModule.forRoot({}),
     EffectsModule.forRoot([])
   ],
   bootstrap: [AppComponent],

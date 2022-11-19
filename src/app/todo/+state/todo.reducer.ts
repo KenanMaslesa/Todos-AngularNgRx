@@ -53,12 +53,21 @@ const reducer = createReducer(
     return { ...state, isLoading: false };
   }),
 
-  on(ToDoActions.DeleteTodo, (state, { id }) => {
+  on(ToDoActions.DeleteTodo, (state) => {
+    return { ...state, isLoading: true };
+  }),
+
+  on(ToDoActions.DeleteTodoSuccess, (state, { id }) => {
     const filteredArray = state.todos.filter((item) => item.id !== id);
     return { ...state, todos: filteredArray, isLoading: false };
   }),
-  
-  on(ToDoActions.DeleteCompletedTodos, (state) => {
+
+  on(ToDoActions.DeleteTodoFailure, (state, { error }) => {
+    alert(error);
+    return { ...state, isLoading: false };
+  }),
+
+  on(ToDoActions.ClearCompletedTodos, (state) => {
     const uncompletedTodos = state.todos.filter((todo) => !todo.completed);
     return { ...state, todos: uncompletedTodos, isLoading: false };
   })

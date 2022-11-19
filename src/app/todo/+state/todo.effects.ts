@@ -61,4 +61,20 @@ export class ToDoEffects {
       )
     )
   );
+
+  deleteTodo$: Observable<Action> = createEffect(() =>
+    this.action$.pipe(
+      ofType(ToDoActions.DeleteTodo),
+      switchMap(({ id }) =>
+        this.todoService.deleteTodo(id).pipe(
+          map(() => {
+            return ToDoActions.DeleteTodoSuccess({id});
+          }),
+          catchError((error: Error) => {
+            return of(ToDoActions.DeleteTodoFailure({ error: error.message }));
+          })
+        )
+      )
+    )
+  );
 }

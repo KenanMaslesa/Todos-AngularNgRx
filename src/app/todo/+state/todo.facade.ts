@@ -2,7 +2,7 @@ import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import {
   AddTodo,
-  DeleteCompletedTodos,
+  ClearCompletedTodos,
   DeleteTodo,
   GetTodos,
   UpdateTodo,
@@ -33,8 +33,8 @@ export class TodoFacade {
     this.store.dispatch(DeleteTodo({ id }));
   }
 
-  public dispatchDeleteCompletedTodos(): void {
-    this.store.dispatch(DeleteCompletedTodos());
+  public dispatchClearCompletedTodos(): void {
+    this.store.dispatch(ClearCompletedTodos());
   }
 
   public dispatchUpdateTodo(payload: Todo, id: number): void {
@@ -45,3 +45,4 @@ export class TodoFacade {
     this.store.dispatch(AddTodo({ payload: todo }));
   }
 }
+
