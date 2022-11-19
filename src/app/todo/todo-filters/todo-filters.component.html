@@ -1,15 +1,10 @@
 <div class="todo__filters">
-  <span
-    *ngIf="
-      todoFacade.numberOfUncompletedTodos$ | async as numberOfUncompletedTodos
-    "
-    >{{ numberOfUncompletedTodos }} items left</span
-  >
-  <!-- <ul>
+  <span>{{ todoFacade.numberOfUncompletedTodos$ | async }} items left</span>
+  <ul>
     <li>All</li>
     <li>Active</li>
     <li>Completed</li>
-  </ul> -->
+  </ul>
 
   <button (click)="clearCompletedTodos()">Clear completed</button>
 </div>

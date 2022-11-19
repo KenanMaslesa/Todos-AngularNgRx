@@ -190,13 +190,9 @@ body {
             border-radius: 3px;
             padding: 3px 7px;
             cursor: pointer;
-            transition: all 0.5s;
+            transition: all 0.2s;
 
-            &:hover {
-              border-color: #ce4646;
-            }
-
-            &.active {
+            &:hover, &.active {
               background-color: #b83f45;
               color: white;
             }
