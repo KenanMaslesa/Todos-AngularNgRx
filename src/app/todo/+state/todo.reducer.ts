@@ -19,7 +19,7 @@ const reducer = createReducer(
 
   on(ToDoActions.GetTodosFailure, (state, { error }) => {
     alert(error);
-    return { ...state, todos: [], isLoading: false };
+    return { ...state, isLoading: false };
   }),
 
   on(ToDoActions.UpdateTodo, (state) => {
