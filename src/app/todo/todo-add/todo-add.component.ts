@@ -19,7 +19,6 @@ export class TodoAddComponent implements OnInit {
   public addTodo(todo: string): void {
     this.todoFacade.dispatchAddTodo({
       id: Date.now(),
-      userId: 11,
       title: todo,
       completed: false,
     });
